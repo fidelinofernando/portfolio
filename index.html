@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fidel Elias Fernando | Desenvolvedor Angular & UI/UX Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,26 +22,29 @@
                     <div class="logo-circle"></div>
                     FidelElias
                 </div>
-                <ul class="nav-links">
+                <ul class="nav-links" role="menu">
                     <li><a class="link" href="#home">Início</a></li>
                     <li><a class="link" href="#about">Sobre</a></li>
                     <li><a class="link" href="#services">Serviços</a></li>
                     <li><a class="link" href="#portfolio">Portfólio</a></li>
                     <li><a class="link" href="#contact">Contato</a></li>
-                    <li><a href="#contact" class="nav-cta">Curriculum Vitae</a></li>
+                    <li>
+                        <!-- Abre modal de CV -->
+                        <a href="#" class="nav-cta" data-open-modal="cvModal">Curriculum Vitae</a>
+                    </li>
                 </ul>
-                <div class="menu-toggle">
+                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
                     <i class="fas fa-bars"></i>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
+                <div class="hero-text reveal">
                     <div class="hero-badge">
                         <i class="fas fa-rocket"></i>
                         Desenvolvedor Front-end & UI/UX Designer
@@ -58,9 +61,9 @@
                         </a>
                     </div>
                 </div>
-                <div class="hero-image">
+                <div class="hero-image reveal">
                     <div class="hero-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                        <img src="https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?auto=format&fit=crop&w=774&q=80"
                             alt="Fidel Elias Fernando" class="hero-image-main">
                         <div class="hero-image-decoration decoration-1"></div>
                         <div class="hero-image-decoration decoration-2"></div>
@@ -70,7 +73,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section class="section" id="about">
         <div class="container">
             <div class="section-title">
@@ -80,11 +83,11 @@
             </p>
 
             <div class="about-content">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                <div class="about-image reveal">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=774&q=80"
                         alt="Fidel Elias Fernando">
                 </div>
-                <div class="about-text">
+                <div class="about-text reveal">
                     <h3>Desenvolvedor Angular/Ionic & UI/UX Designer com 5+ anos de experiência</h3>
                     <p>Sou apaixonado por criar soluções digitais que combinam funcionalidade robusta com designs
                         atraentes e intuitivos. Minha abordagem centrada no usuário garante que cada projeto não apenas
@@ -92,42 +95,33 @@
                     <p>Com background tanto em desenvolvimento quanto em design, consigo traduzir perfeitamente
                         conceitos criativos em código funcional, garantindo fidelidade ao design e performance
                         otimizada.</p>
-
                     <div class="skills">
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Angular</span>
-                                <span class="skill-percent">95%</span>
-                            </div>
+                            <div class="skill-info"><span class="skill-name">Angular</span><span
+                                    class="skill-percent">75%</span></div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
+                                <div class="skill-progress" style="width:75%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Ionic Framework</span>
-                                <span class="skill-percent">90%</span>
-                            </div>
+                            <div class="skill-info"><span class="skill-name">Ionic Framework</span><span
+                                    class="skill-percent">75%</span></div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                                <div class="skill-progress" style="width:75%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">UI/UX Design</span>
-                                <span class="skill-percent">85%</span>
-                            </div>
+                            <div class="skill-info"><span class="skill-name">UI/UX Design</span><span
+                                    class="skill-percent">80%</span></div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                                <div class="skill-progress" style="width:80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">TypeScript/JavaScript</span>
-                                <span class="skill-percent">95%</span>
-                            </div>
+                            <div class="skill-info"><span class="skill-name">TypeScript/JavaScript</span><span
+                                    class="skill-percent">65%</span></div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
+                                <div class="skill-progress" style="width:65%"></div>
                             </div>
                         </div>
                     </div>
@@ -136,7 +130,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section class="section services" id="services">
         <div class="container">
             <div class="section-title">
@@ -145,44 +139,40 @@
             <p class="section-subtitle">Soluções personalizadas para transformar suas ideias em realidade digital</p>
 
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
                     <h3>Desenvolvimento Angular</h3>
                     <p>Aplicações web modernas e responsivas construídas com Angular, seguindo as melhores práticas de
                         desenvolvimento e padrões de código limpo.</p>
-                    <a href="#" class="service-link">
+                    <button class="service-link" data-open-modal="serviceModal" data-service="angular">
                         Saiba mais <i class="fas fa-arrow-right"></i>
-                    </a>
+                    </button>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
                     <h3>Aplicativos Ionic</h3>
                     <p>Desenvolvimento de aplicativos móveis multiplataforma com Ionic Framework, garantindo performance
                         nativa e compatibilidade com iOS e Android.</p>
-                    <a href="#" class="service-link">
+                    <button class="service-link" data-open-modal="serviceModal" data-service="ionic">
                         Saiba mais <i class="fas fa-arrow-right"></i>
-                    </a>
+                    </button>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
                     <h3>UI/UX Design</h3>
                     <p>Design de interfaces intuitivas e atraentes, com prototipagem interativa e testes de usabilidade
                         para garantir a melhor experiência do usuário.</p>
-                    <a href="#" class="service-link">
+                    <button class="service-link" data-open-modal="serviceModal" data-service="uiux">
                         Saiba mais <i class="fas fa-arrow-right"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio -->
     <section class="section" id="portfolio">
         <div class="container">
             <div class="section-title">
@@ -198,8 +188,8 @@
             </div>
 
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="web">
-                    <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=800" alt="Projeto Web"
+                <div class="portfolio-item reveal" data-category="web">
+                    <img src="/assets/image/Screenshot from 2025-08-13 10-09-43.png" alt="Projeto Web"
                         class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3>Dashboard Angular</h3>
@@ -210,7 +200,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="mobile">
+
+                <div class="portfolio-item reveal" data-category="mobile">
                     <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800" alt="App Mobile"
                         class="portfolio-img">
                     <div class="portfolio-overlay">
@@ -222,9 +213,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="design">
-                    <img src="https://images.unsplash.com/photo-1581091870622-8d1b0b5bff1a?w=800" alt="UI/UX Design"
-                        class="portfolio-img">
+
+                <div class="portfolio-item reveal" data-category="design">
+                    <img src="/assets/image/home feeds.png" alt="UI/UX Design" class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3>UI Design Plataforma SaaS</h3>
                         <p>Prototipagem e design de interface</p>
@@ -232,30 +223,32 @@
                             <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
                             <a href="#" class="portfolio-link"><i class="fab fa-figma"></i></a>
                         </div>
+
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section class="section contact" id="contact">
         <div class="container contact-container">
-            <div class="contact-info">
+            <div class="contact-info reveal">
                 <h3>Entre em Contato</h3>
                 <div class="contact-details">
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-text">
                             <h4>Email</h4>
-                            <a href="mailto:fidel.elias@email.com">fidel.elias@email.com</a>
+                            <a href="mailto:fidelinomasta@gmail.com">fidelinomasta@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div class="contact-text">
                             <h4>Telefone</h4>
-                            <p>+244 900 000 000</p>
+                            <p>+244 972 634 992</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -267,13 +260,14 @@
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://github.com/fidelinofernando" class="social-link"
+                        aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/fidel-fernando-74858b252/" class="social-link"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form reveal" id="contactForm" novalidate>
                 <div class="form-group">
                     <label for="name">Nome</label>
                     <input type="text" id="name" placeholder="Seu nome" required>
@@ -286,7 +280,10 @@
                     <label for="message">Mensagem</label>
                     <textarea id="message" placeholder="Escreva sua mensagem..." required></textarea>
                 </div>
-                <button type="submit" class="btn submit-btn">Enviar Mensagem</button>
+                <button type="submit" class="btn submit-btn" id="sendBtn">
+                    <span class="btn-label">Enviar Mensagem</span>
+                    <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
             </form>
         </div>
     </section>
@@ -305,40 +302,235 @@
                 <a href="#contact">Contato</a>
             </div>
             <div class="footer-social">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://github.com/fidelinofernando"><i class="fab fa-github"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/fidel-fernando-74858b252/"><i
+                        class="fab fa-linkedin"></i></a>
             </div>
             <p class="copyright">© 2025 Fidel Elias Fernando. Todos os direitos reservados.</p>
-            <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+            <a href="#home" class="back-to-top" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
         </div>
     </footer>
 
+    <!-- Modal Base (reutilizável) -->
+    <div class="modal" id="cvModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cvModalTitle">
+        <div class="modal-dialog" role="document">
+            <div class="modal-header">
+                <h3 id="cvModalTitle"><i class="fas fa-file-lines"></i> Curriculum Vitae</h3>
+                <button class="modal-close" data-close-modal aria-label="Fechar modal"><i
+                        class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Baixe ou visualize o meu currículo atualizado.</p>
+                <!-- Ajuste os links abaixo para seu arquivo real -->
+                <div class="cv-actions">
+                    <a class="btn" href="/assets/documents/Curriculo Fidel Elias Fernando.pdf" download>Baixar PDF</a>
+                    <a class="btn btn-outline" target="_blank"
+                        href="/assets/documents/Curriculo Fidel Elias Fernando.pdf">Visualizar</a>
+                </div>
+                <div class="cv-preview">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Pré-visualização não carregada. Clique em “Visualizar”.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Serviços (conteúdo dinâmico) -->
+    <div class="modal" id="serviceModal" role="dialog" aria-modal="true" aria-hidden="true"
+        aria-labelledby="serviceModalTitle">
+        <div class="modal-dialog" role="document">
+            <div class="modal-header">
+                <h3 id="serviceModalTitle"><i class="fas fa-circle-info"></i> Detalhes do Serviço</h3>
+                <button class="modal-close" data-close-modal aria-label="Fechar modal"><i
+                        class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" id="serviceModalContent">
+                <!-- Preenchido via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
     <script>
-        // Menu Mobile
+        // ===== Menu Mobile =====
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
         menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            const isOpen = navLinks.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.matches('.link')) navLinks.classList.remove('active');
         });
 
-        // Filtro Portfólio
+        // ===== Filtro Portfólio =====
         const filterBtns = document.querySelectorAll('.filter-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
-
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 const category = btn.dataset.filter;
                 portfolioItems.forEach(item => {
-                    if (category === 'all' || item.dataset.category === category) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
+                    item.style.display = (category === 'all' || item.dataset.category === category) ? 'block' : 'none';
                 });
             });
+        });
+
+        // ===== Reveal On Scroll (IntersectionObserver) =====
+        const revealElements = document.querySelectorAll('.reveal');
+        const IO = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    IO.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.18 });
+        revealElements.forEach(el => IO.observe(el));
+
+        // ===== Modal Controller =====
+        const body = document.body;
+        const openButtons = document.querySelectorAll('[data-open-modal]');
+        const closeSelectors = '[data-close-modal]';
+        let lastFocused;
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (!modal) return;
+            lastFocused = document.activeElement;
+            modal.setAttribute('aria-hidden', 'false');
+            modal.classList.add('open');
+            body.classList.add('no-scroll');
+            const firstFocusable = modal.querySelector('button, a, input, textarea, [tabindex]:not([tabindex="-1"])');
+            firstFocusable && firstFocusable.focus();
+        }
+        function closeModal(modal) {
+            modal.setAttribute('aria-hidden', 'true');
+            modal.classList.remove('open');
+            body.classList.remove('no-scroll');
+            lastFocused && lastFocused.focus();
+        }
+
+        openButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const id = btn.getAttribute('data-open-modal');
+                // Conteúdo dinâmico do modal de serviços
+                if (id === 'serviceModal') {
+                    const type = btn.getAttribute('data-service');
+                    const content = {
+                        angular: {
+                            title: 'Desenvolvimento Angular',
+                            items: ['Arquitetura com Standalone Components', 'RxJS e State Management (NgRx/Signals)', 'SSR/SSG com Angular Universal', 'Testes unitários (Jest/Karma) e e2e (Cypress)'],
+                            icon: 'fa-code'
+                        },
+                        ionic: {
+                            title: 'Aplicativos Ionic',
+                            items: ['Capacitor Plugins nativos', 'Publicação iOS/Android', 'Desempenho com lazy-loading', 'Notificações push e analytics'],
+                            icon: 'fa-mobile-alt'
+                        },
+                        uiux: {
+                            title: 'UI/UX Design',
+                            items: ['Design System e tokens', 'Prototipagem Figma/Framer', 'Testes de usabilidade', 'Acessibilidade (WCAG)'],
+                            icon: 'fa-paint-brush'
+                        }
+                    }[type];
+
+                    const html = `
+            <div class="service-detail">
+              <div class="service-detail-icon"><i class="fas ${content.icon}"></i></div>
+              <h4>${content.title}</h4>
+              <ul>${content.items.map(i => `<li><i class="fas fa-check"></i> ${i}</li>`).join('')}</ul>
+              <a href="#contact" class="btn">Solicitar proposta</a>
+            </div>
+          `;
+                    document.getElementById('serviceModalContent').innerHTML = html;
+                    document.getElementById('serviceModalTitle').innerHTML = `<i class="fas fa-circle-info"></i> ${content.title}`;
+                }
+                openModal(id);
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (e.target.matches(closeSelectors)) {
+                const modal = e.target.closest('.modal');
+                closeModal(modal);
+            }
+            // fecha ao clicar fora
+            if (e.target.classList.contains('modal')) {
+                closeModal(e.target);
+            }
+        });
+        // ESC fecha
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.open').forEach(m => closeModal(m));
+            }
+        });
+
+        // ===== Toast (alerta moderno) =====
+        const toastContainer = document.getElementById('toastContainer');
+        function showToast({ title = 'Sucesso', message = '', icon = 'fa-check-circle', duration = 4000 } = {}) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `
+        <div class="toast-icon"><i class="fas ${icon}"></i></div>
+        <div class="toast-content">
+          <strong>${title}</strong>
+          <span>${message}</span>
+        </div>
+        <button class="toast-close" aria-label="Fechar notificação"><i class="fas fa-times"></i></button>
+        <div class="toast-progress"></div>
+      `;
+            toastContainer.appendChild(toast);
+
+            // força reflow para animar progress
+            requestAnimationFrame(() => toast.classList.add('show'));
+            const progress = toast.querySelector('.toast-progress');
+            progress.style.transition = `width ${duration}ms linear`;
+            requestAnimationFrame(() => progress.style.width = '0%');
+
+            const remove = () => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 250);
+            };
+            const timer = setTimeout(remove, duration);
+
+            toast.querySelector('.toast-close').addEventListener('click', () => {
+                clearTimeout(timer);
+                remove();
+            });
+        }
+
+        // ===== Formulário de Contato =====
+        const form = document.getElementById('contactForm');
+        const sendBtn = document.getElementById('sendBtn');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // validação simples
+            const name = form.querySelector('#name');
+            const email = form.querySelector('#email');
+            const message = form.querySelector('#message');
+            if (!name.value.trim() || !email.validity.valid || !message.value.trim()) {
+                showToast({ title: 'Verifique os campos', message: 'Preencha nome, e-mail válido e mensagem.', icon: 'fa-triangle-exclamation', duration: 4500 });
+                return;
+            }
+
+            // feedback de envio
+            sendBtn.disabled = true;
+            sendBtn.classList.add('loading');
+
+            // simulação de envio
+            setTimeout(() => {
+                sendBtn.disabled = false;
+                sendBtn.classList.remove('loading');
+                form.reset();
+                showToast({ title: 'Mensagem enviada!', message: 'Obrigado por entrar em contato. Retornarei em breve.', icon: 'fa-paper-plane' });
+            }, 1200);
         });
     </script>
 </body>
