@@ -1,538 +1,609 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fidel Elias Fernando | Desenvolvedor Angular & UI/UX Designer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fidel Fernando — Frontend Developer & UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <div class="logo-circle"></div>
-                    FidelElias
-                </div>
-                <ul class="nav-links" role="menu">
-                    <li><a class="link" href="#home">Início</a></li>
-                    <li><a class="link" href="#about">Sobre</a></li>
-                    <li><a class="link" href="#services">Serviços</a></li>
-                    <li><a class="link" href="#portfolio">Portfólio</a></li>
-                    <li><a class="link" href="#contact">Contato</a></li>
-                    <li>
-                        <!-- Abre modal de CV -->
-                        <a href="#" class="nav-cta" data-open-modal="cvModal">Curriculum Vitae</a>
-                    </li>
-                </ul>
-                <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text reveal">
-                    <div class="hero-badge">
-                        <i class="fas fa-rocket"></i>
-                        Desenvolvedor Front-end & UI/UX Designer
-                    </div>
-                    <h1>Transformando ideias em <span>experiências digitais</span></h1>
-                    <p>Especialista em Angular e Ionic, combino habilidades técnicas com design intuitivo para criar
-                        soluções que encantam usuários e impulsionam negócios.</p>
-                    <div class="btn-group">
-                        <a href="#portfolio" class="btn">
-                            <i class="fas fa-eye"></i> Ver Projetos
-                        </a>
-                        <a href="#contact" class="btn btn-outline">
-                            <i class="fas fa-paper-plane"></i> Contate-me
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image reveal">
-                    <div class="hero-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1575089976121-8ed7b2a54265?auto=format&fit=crop&w=774&q=80"
-                            alt="Fidel Elias Fernando" class="hero-image-main">
-                        <div class="hero-image-decoration decoration-1"></div>
-                        <div class="hero-image-decoration decoration-2"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
 
-    <!-- About -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>Sobre Mim</h2>
-            </div>
-            <p class="section-subtitle">Conheça um pouco mais sobre mim, minhas habilidades e experiência profissional
-            </p>
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-name">FIDEL</span>
+      <div class="loader-bar"><div class="loader-bar-fill" id="loaderFill"></div></div>
+      <span class="loader-percent" id="loaderPercent">0%</span>
+    </div>
+  </div>
 
-            <div class="about-content">
-                <div class="about-image reveal">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=774&q=80"
-                        alt="Fidel Elias Fernando">
-                </div>
-                <div class="about-text reveal">
-                    <h3>Desenvolvedor Angular/Ionic & UI/UX Designer com 5+ anos de experiência</h3>
-                    <p>Sou apaixonado por criar soluções digitais que combinam funcionalidade robusta com designs
-                        atraentes e intuitivos. Minha abordagem centrada no usuário garante que cada projeto não apenas
-                        atenda aos requisitos técnicos, mas também proporcione uma experiência excepcional.</p>
-                    <p>Com background tanto em desenvolvimento quanto em design, consigo traduzir perfeitamente
-                        conceitos criativos em código funcional, garantindo fidelidade ao design e performance
-                        otimizada.</p>
-                    <div class="skills">
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">Angular</span><span
-                                    class="skill-percent">75%</span></div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width:75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">Ionic Framework</span><span
-                                    class="skill-percent">75%</span></div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width:75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">UI/UX Design</span><span
-                                    class="skill-percent">80%</span></div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width:80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span class="skill-name">TypeScript/JavaScript</span><span
-                                    class="skill-percent">65%</span></div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width:65%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">FF<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about" data-cursor="link">Sobre</a></li>
+      <li><a href="#work" data-cursor="link">Trabalho</a></li>
+      <li><a href="#skills" data-cursor="link">Skills</a></li>
+      <li><a href="#contact" data-cursor="link">Contacto</a></li>
+    </ul>
+    <a href="mailto:fidelinomasta@gmail.com" class="nav-cta" data-cursor="link">Contrata-me →</a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
 
-    <!-- Services -->
-    <section class="section services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Meus Serviços</h2>
-            </div>
-            <p class="section-subtitle">Soluções personalizadas para transformar suas ideias em realidade digital</p>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" data-cursor="link">Sobre</a></li>
+      <li><a href="#work" data-cursor="link">Trabalho</a></li>
+      <li><a href="#skills" data-cursor="link">Skills</a></li>
+      <li><a href="#contact" data-cursor="link">Contacto</a></li>
+    </ul>
+  </div>
 
-            <div class="services-grid">
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-code"></i></div>
-                    <h3>Desenvolvimento Angular</h3>
-                    <p>Aplicações web modernas e responsivas construídas com Angular, seguindo as melhores práticas de
-                        desenvolvimento e padrões de código limpo.</p>
-                    <button class="service-link" data-open-modal="serviceModal" data-service="angular">
-                        Saiba mais <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>Aplicativos Ionic</h3>
-                    <p>Desenvolvimento de aplicativos móveis multiplataforma com Ionic Framework, garantindo performance
-                        nativa e compatibilidade com iOS e Android.</p>
-                    <button class="service-link" data-open-modal="serviceModal" data-service="ionic">
-                        Saiba mais <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-                    <h3>UI/UX Design</h3>
-                    <p>Design de interfaces intuitivas e atraentes, com prototipagem interativa e testes de usabilidade
-                        para garantir a melhor experiência do usuário.</p>
-                    <button class="service-link" data-open-modal="serviceModal" data-service="uiux">
-                        Saiba mais <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="section" id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Portfólio</h2>
-            </div>
-            <p class="section-subtitle">Alguns dos meus projetos mais recentes e trabalhos selecionados</p>
-
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="design">Design</button>
-            </div>
-
-            <div class="portfolio-grid">
-                <div class="portfolio-item reveal" data-category="web">
-                    <img src="/assets/image/Screenshot from 2025-08-13 10-09-43.png" alt="Projeto Web"
-                        class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Dashboard Angular</h3>
-                        <p>Sistema completo de gestão em Angular</p>
-                        <div class="portfolio-links">
-                            <a href="#" class="portfolio-link" title="Ver Projeto"><i class="fas fa-eye"></i></a>
-                            <a href="#" class="portfolio-link" title="Código Fonte"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item reveal" data-category="mobile">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800" alt="App Mobile"
-                        class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>App Delivery Ionic</h3>
-                        <p>Aplicativo de delivery multiplataforma</p>
-                        <div class="portfolio-links">
-                            <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
-                            <a href="#" class="portfolio-link"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item reveal" data-category="design">
-                    <img src="/assets/image/home feeds.png" alt="UI/UX Design" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>UI Design Plataforma SaaS</h3>
-                        <p>Prototipagem e design de interface</p>
-                        <div class="portfolio-links">
-                            <a href="#" class="portfolio-link"><i class="fas fa-eye"></i></a>
-                            <a href="#" class="portfolio-link"><i class="fab fa-figma"></i></a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact" id="contact">
-        <div class="container contact-container">
-            <div class="contact-info reveal">
-                <h3>Entre em Contato</h3>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-text">
-                            <h4>Email</h4>
-                            <a href="mailto:fidelinomasta@gmail.com">fidelinomasta@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                        <div class="contact-text">
-                            <h4>Telefone</h4>
-                            <p>+244 972 634 992</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-text">
-                            <h4>Localização</h4>
-                            <p>Luanda, Angola</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a target="_blank" href="https://github.com/fidelinofernando" class="social-link"
-                        aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/fidel-fernando-74858b252/" class="social-link"
-                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-
-            <form class="contact-form reveal" id="contactForm" novalidate>
-                <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" placeholder="Seu nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Seu e-mail" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" placeholder="Escreva sua mensagem..." required></textarea>
-                </div>
-                <button type="submit" class="btn submit-btn" id="sendBtn">
-                    <span class="btn-label">Enviar Mensagem</span>
-                    <span class="btn-spinner" aria-hidden="true"></span>
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">
-                <div class="logo-circle"></div> FidelElias
-            </div>
-            <div class="footer-links">
-                <a href="#home">Início</a>
-                <a href="#about">Sobre</a>
-                <a href="#services">Serviços</a>
-                <a href="#portfolio">Portfólio</a>
-                <a href="#contact">Contato</a>
-            </div>
-            <div class="footer-social">
-                <a target="_blank" href="https://github.com/fidelinofernando"><i class="fab fa-github"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/fidel-fernando-74858b252/"><i
-                        class="fab fa-linkedin"></i></a>
-            </div>
-            <p class="copyright">© 2025 Fidel Elias Fernando. Todos os direitos reservados.</p>
-            <a href="#home" class="back-to-top" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
-        </div>
-    </footer>
-
-    <!-- Modal Base (reutilizável) -->
-    <div class="modal" id="cvModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cvModalTitle">
-        <div class="modal-dialog" role="document">
-            <div class="modal-header">
-                <h3 id="cvModalTitle"><i class="fas fa-file-lines"></i> Curriculum Vitae</h3>
-                <button class="modal-close" data-close-modal aria-label="Fechar modal"><i
-                        class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <p>Baixe ou visualize o meu currículo atualizado.</p>
-                <!-- Ajuste os links abaixo para seu arquivo real -->
-                <div class="cv-actions">
-                    <a class="btn" href="/assets/documents/Curriculo Fidel Elias Fernando.pdf" download>Baixar PDF</a>
-                    <a class="btn btn-outline" target="_blank"
-                        href="/assets/documents/Curriculo Fidel Elias Fernando.pdf">Visualizar</a>
-                </div>
-                <div class="cv-preview">
-                    <i class="fas fa-file-pdf"></i>
-                    <span>Pré-visualização não carregada. Clique em “Visualizar”.</span>
-                </div>
-            </div>
-        </div>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
     </div>
 
-    <!-- Modal Serviços (conteúdo dinâmico) -->
-    <div class="modal" id="serviceModal" role="dialog" aria-modal="true" aria-hidden="true"
-        aria-labelledby="serviceModalTitle">
-        <div class="modal-dialog" role="document">
-            <div class="modal-header">
-                <h3 id="serviceModalTitle"><i class="fas fa-circle-info"></i> Detalhes do Serviço</h3>
-                <button class="modal-close" data-close-modal aria-label="Fechar modal"><i
-                        class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body" id="serviceModalContent">
-                <!-- Preenchido via JS -->
-            </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up">
+        <span class="dot"></span> Disponível para trabalho · Luanda, Angola
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line reveal-up" data-delay="0.1">Frontend</span>
+        <span class="line reveal-up italic-line" data-delay="0.2">Developer</span>
+        <span class="line reveal-up" data-delay="0.3">&amp; UI/UX</span>
+        <span class="line reveal-up accent-line" data-delay="0.4">Designer.</span>
+      </h1>
+
+      <p class="hero-sub reveal-up" data-delay="0.5">
+        Transformo ideias em interfaces que <em>encantam</em> e <em>performam</em>.<br/>
+        Angular · Ionic · Figma · 2+ anos de experiência.
+      </p>
+
+      <div class="hero-actions reveal-up" data-delay="0.6">
+        <a href="#work" class="btn-primary" data-cursor="link">Ver trabalho</a>
+        <a href="#contact" class="btn-ghost" data-cursor="link">Falar comigo</a>
+      </div>
+
+      <div class="hero-stats reveal-up" data-delay="0.7">
+        <div class="stat">
+          <span class="stat-num" data-count="35">0</span><span>%</span>
+          <p>Redução no tempo de carga</p>
         </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="40">0</span><span>%</span>
+          <p>Queda na taxa de bounce</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="4">0</span><span>+</span>
+          <p>Projectos entregues</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Toast container -->
-    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+    <div class="hero-image-wrap reveal-right">
+      <div class="hero-img-ring"></div>
+      <div class="hero-img-glow"></div>
+      <img src="assets/image/Imagem Fidel.png" alt="Fidel Fernando" class="hero-img" id="heroImg" />
+      <div class="hero-img-label">
+        <span>UI/UX Designer</span>
+        <span class="sep">·</span>
+        <span>Frontend Dev</span>
+      </div>
+    </div>
 
-    <script>
-        // ===== Menu Mobile =====
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        menuToggle.addEventListener('click', () => {
-            const isOpen = navLinks.classList.toggle('active');
-            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
-        navLinks.addEventListener('click', (e) => {
-            if (e.target.matches('.link')) navLinks.classList.remove('active');
-        });
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
 
-        // ===== Filtro Portfólio =====
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const category = btn.dataset.filter;
-                portfolioItems.forEach(item => {
-                    item.style.display = (category === 'all' || item.dataset.category === category) ? 'block' : 'none';
-                });
-            });
-        });
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <span>Angular</span><span class="dot-sep">·</span>
+        <span>Ionic Framework</span><span class="dot-sep">·</span>
+        <span>Figma</span><span class="dot-sep">·</span>
+        <span>TypeScript</span><span class="dot-sep">·</span>
+        <span>Tailwind CSS</span><span class="dot-sep">·</span>
+        <span>UI/UX Design</span><span class="dot-sep">·</span>
+        <span>Mobile-First</span><span class="dot-sep">·</span>
+        <span>Design Systems</span><span class="dot-sep">·</span>
+        <span>Performance Web</span><span class="dot-sep">·</span>
+        <span>Angular</span><span class="dot-sep">·</span>
+        <span>Ionic Framework</span><span class="dot-sep">·</span>
+        <span>Figma</span><span class="dot-sep">·</span>
+        <span>TypeScript</span><span class="dot-sep">·</span>
+        <span>Tailwind CSS</span><span class="dot-sep">·</span>
+        <span>UI/UX Design</span><span class="dot-sep">·</span>
+        <span>Mobile-First</span><span class="dot-sep">·</span>
+        <span>Design Systems</span><span class="dot-sep">·</span>
+        <span>Performance Web</span><span class="dot-sep">·</span>
+      </div>
+    </div>
+  </div>
 
-        // ===== Reveal On Scroll (IntersectionObserver) =====
-        const revealElements = document.querySelectorAll('.reveal');
-        const IO = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    IO.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.18 });
-        revealElements.forEach(el => IO.observe(el));
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">01</span>
+        <span>Sobre mim</span>
+      </div>
 
-        // ===== Modal Controller =====
-        const body = document.body;
-        const openButtons = document.querySelectorAll('[data-open-modal]');
-        const closeSelectors = '[data-close-modal]';
-        let lastFocused;
-
-        function openModal(id) {
-            const modal = document.getElementById(id);
-            if (!modal) return;
-            lastFocused = document.activeElement;
-            modal.setAttribute('aria-hidden', 'false');
-            modal.classList.add('open');
-            body.classList.add('no-scroll');
-            const firstFocusable = modal.querySelector('button, a, input, textarea, [tabindex]:not([tabindex="-1"])');
-            firstFocusable && firstFocusable.focus();
-        }
-        function closeModal(modal) {
-            modal.setAttribute('aria-hidden', 'true');
-            modal.classList.remove('open');
-            body.classList.remove('no-scroll');
-            lastFocused && lastFocused.focus();
-        }
-
-        openButtons.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const id = btn.getAttribute('data-open-modal');
-                // Conteúdo dinâmico do modal de serviços
-                if (id === 'serviceModal') {
-                    const type = btn.getAttribute('data-service');
-                    const content = {
-                        angular: {
-                            title: 'Desenvolvimento Angular',
-                            items: ['Arquitetura com Standalone Components', 'RxJS e State Management (NgRx/Signals)', 'SSR/SSG com Angular Universal', 'Testes unitários (Jest/Karma) e e2e (Cypress)'],
-                            icon: 'fa-code'
-                        },
-                        ionic: {
-                            title: 'Aplicativos Ionic',
-                            items: ['Capacitor Plugins nativos', 'Publicação iOS/Android', 'Desempenho com lazy-loading', 'Notificações push e analytics'],
-                            icon: 'fa-mobile-alt'
-                        },
-                        uiux: {
-                            title: 'UI/UX Design',
-                            items: ['Design System e tokens', 'Prototipagem Figma/Framer', 'Testes de usabilidade', 'Acessibilidade (WCAG)'],
-                            icon: 'fa-paint-brush'
-                        }
-                    }[type];
-
-                    const html = `
-            <div class="service-detail">
-              <div class="service-detail-icon"><i class="fas ${content.icon}"></i></div>
-              <h4>${content.title}</h4>
-              <ul>${content.items.map(i => `<li><i class="fas fa-check"></i> ${i}</li>`).join('')}</ul>
-              <a href="#contact" class="btn">Solicitar proposta</a>
-            </div>
-          `;
-                    document.getElementById('serviceModalContent').innerHTML = html;
-                    document.getElementById('serviceModalTitle').innerHTML = `<i class="fas fa-circle-info"></i> ${content.title}`;
-                }
-                openModal(id);
-            });
-        });
-
-        document.addEventListener('click', (e) => {
-            if (e.target.matches(closeSelectors)) {
-                const modal = e.target.closest('.modal');
-                closeModal(modal);
-            }
-            // fecha ao clicar fora
-            if (e.target.classList.contains('modal')) {
-                closeModal(e.target);
-            }
-        });
-        // ESC fecha
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.modal.open').forEach(m => closeModal(m));
-            }
-        });
-
-        // ===== Toast (alerta moderno) =====
-        const toastContainer = document.getElementById('toastContainer');
-        function showToast({ title = 'Sucesso', message = '', icon = 'fa-check-circle', duration = 4000 } = {}) {
-            const toast = document.createElement('div');
-            toast.className = 'toast';
-            toast.innerHTML = `
-        <div class="toast-icon"><i class="fas ${icon}"></i></div>
-        <div class="toast-content">
-          <strong>${title}</strong>
-          <span>${message}</span>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title reveal-up">
+            Criando experiências <br/><em>digitais que ficam</em> <br/>na memória.
+          </h2>
+          <p class="about-body reveal-up" data-delay="0.1">
+            Sou Fidel Fernando, desenvolvedor Front-end e UI/UX Designer baseado em Luanda, Angola. 
+            Com mais de 2 anos de experiência, especializei-me em criar interfaces que não apenas 
+            parecem belas — elas <strong>performam excepcionalmente</strong>.
+          </p>
+          <p class="about-body reveal-up" data-delay="0.2">
+            Atualmente a cursar Engenharia Informática na UCAN, combino sólidos fundamentos 
+            técnicos com uma visão apurada de design para entregar produtos que encantam utilizadores 
+            e superam métricas de negócio.
+          </p>
+          <div class="about-tags reveal-up" data-delay="0.3">
+            <span>🎓 UCAN — Eng. Informática</span>
+            <span>📍 Luanda, Angola</span>
+            <span>💼 Open to Work</span>
+          </div>
         </div>
-        <button class="toast-close" aria-label="Fechar notificação"><i class="fas fa-times"></i></button>
-        <div class="toast-progress"></div>
-      `;
-            toastContainer.appendChild(toast);
 
-            // força reflow para animar progress
-            requestAnimationFrame(() => toast.classList.add('show'));
-            const progress = toast.querySelector('.toast-progress');
-            progress.style.transition = `width ${duration}ms linear`;
-            requestAnimationFrame(() => progress.style.width = '0%');
+        <div class="about-cards">
+          <div class="about-card reveal-up" data-delay="0.1">
+            <div class="card-icon">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>Do wireframe ao produto final. Figma, design systems e prototipagem de alta fidelidade.</p>
+          </div>
+          <div class="about-card reveal-up" data-delay="0.2">
+            <div class="card-icon">⚡</div>
+            <h3>Performance</h3>
+            <p>Especialista em optimização. -35% tempo de carga, -40% bounce rate em projetos reais.</p>
+          </div>
+          <div class="about-card reveal-up" data-delay="0.3">
+            <div class="card-icon">📱</div>
+            <h3>Mobile-First</h3>
+            <p>Aplicações Ionic Framework e desenvolvimento responsivo centrado no utilizador móvel.</p>
+          </div>
+          <div class="about-card reveal-up" data-delay="0.4">
+            <div class="card-icon">🔧</div>
+            <h3>Full-Cycle Dev</h3>
+            <p>Da prototipagem no Figma à implementação Angular/Ionic. Entrego o produto completo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            const remove = () => {
-                toast.classList.remove('show');
-                setTimeout(() => toast.remove(), 250);
-            };
-            const timer = setTimeout(remove, duration);
+  <!-- WORK / PROJECTS -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">02</span>
+        <span>Projectos em destaque</span>
+      </div>
+      <h2 class="section-title reveal-up">Trabalho <em>seleccionado</em></h2>
+    </div>
 
-            toast.querySelector('.toast-close').addEventListener('click', () => {
-                clearTimeout(timer);
-                remove();
-            });
-        }
+    <div class="projects-list">
 
-        // ===== Formulário de Contato =====
-        const form = document.getElementById('contactForm');
-        const sendBtn = document.getElementById('sendBtn');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
+      <div class="project-item reveal-up" data-delay="0.1">
+        <div class="project-number">01</div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span>Ionic Framework</span>
+            <span>Mobile</span>
+            <span>UI/UX</span>
+          </div>
+          <h3 class="project-title">App Móvel ISYS D'CORE</h3>
+          <p class="project-desc">
+            Aplicação mobile desenvolvida do zero com Ionic Framework. 
+            Arquitectura mobile-first resultou em <strong>-35% no tempo de carregamento</strong>, 
+            aumentando a satisfação dos utilizadores significativamente.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">-35%</span>
+              <span class="metric-label">Tempo de carga</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">+35%</span>
+              <span class="metric-label">Satisfação do user</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-visual pv-1">
+          <div class="pv-inner">
+            <div class="phone-mock">
+              <div class="phone-screen">
+                <div class="app-ui app-ui-1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            // validação simples
-            const name = form.querySelector('#name');
-            const email = form.querySelector('#email');
-            const message = form.querySelector('#message');
-            if (!name.value.trim() || !email.validity.valid || !message.value.trim()) {
-                showToast({ title: 'Verifique os campos', message: 'Preencha nome, e-mail válido e mensagem.', icon: 'fa-triangle-exclamation', duration: 4500 });
-                return;
-            }
+      <div class="project-item reveal-up" data-delay="0.2">
+        <div class="project-number">02</div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span>Angular</span>
+            <span>SPA</span>
+            <span>Performance</span>
+          </div>
+          <h3 class="project-title">Optimização SPA Angular</h3>
+          <p class="project-desc">
+            Diagnóstico e correcção de gargalos de performance numa aplicação Angular complexa. 
+            Implementação de lazy loading, code splitting e optimização de bundle — 
+            resultando em <strong>+2s de melhoria na velocidade de carregamento</strong>.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">+2s</span>
+              <span class="metric-label">Melhoria de speed</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">-40%</span>
+              <span class="metric-label">Bounce rate</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-visual pv-2">
+          <div class="pv-inner">
+            <div class="browser-mock">
+              <div class="browser-bar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="browser-screen">
+                <div class="app-ui app-ui-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            // feedback de envio
-            sendBtn.disabled = true;
-            sendBtn.classList.add('loading');
+      <div class="project-item reveal-up" data-delay="0.3">
+        <div class="project-number">03</div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span>Figma</span>
+            <span>Design System</span>
+            <span>UX Research</span>
+          </div>
+          <h3 class="project-title">Design System & Fluxo UX</h3>
+          <p class="project-desc">
+            Criação de design system completo no Figma que standardizou componentes, tokens e 
+            guidelines para toda a equipa. Simplificação de fluxo de utilizador de 
+            <strong>5 etapas para apenas 2</strong>. Reduziu decisões de UI em 70% para devs juniores.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">-70%</span>
+              <span class="metric-label">Decisões UI</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">5→2</span>
+              <span class="metric-label">Etapas do fluxo</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-visual pv-3">
+          <div class="pv-inner">
+            <div class="figma-mock">
+              <div class="figma-sidebar"></div>
+              <div class="figma-canvas">
+                <div class="comp-card c1"></div>
+                <div class="comp-card c2"></div>
+                <div class="comp-card c3"></div>
+                <div class="comp-card c4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            // simulação de envio
-            setTimeout(() => {
-                sendBtn.disabled = false;
-                sendBtn.classList.remove('loading');
-                form.reset();
-                showToast({ title: 'Mensagem enviada!', message: 'Obrigado por entrar em contato. Retornarei em breve.', icon: 'fa-paper-plane' });
-            }, 1200);
-        });
-    </script>
+      <div class="project-item reveal-up" data-delay="0.4">
+        <div class="project-number">04</div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span>Tailwind CSS</span>
+            <span>Multi-projecto</span>
+            <span>Standards</span>
+          </div>
+          <h3 class="project-title">Standardização Tailwind CSS</h3>
+          <p class="project-desc">
+            Implementação e padronização do Tailwind CSS em <strong>4 projectos simultâneos</strong>, 
+            criando guidelines de uso, tokens customizados e componentes reutilizáveis. 
+            Corte de 50% no tempo de estilização da equipa de desenvolvimento.
+          </p>
+          <div class="project-metrics">
+            <div class="metric">
+              <span class="metric-val">4</span>
+              <span class="metric-label">Projectos integrados</span>
+            </div>
+            <div class="metric">
+              <span class="metric-val">-50%</span>
+              <span class="metric-label">Tempo de styling</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-visual pv-4">
+          <div class="pv-inner">
+            <div class="code-mock">
+              <div class="code-line cl-1"></div>
+              <div class="code-line cl-2"></div>
+              <div class="code-line cl-3"></div>
+              <div class="code-line cl-4"></div>
+              <div class="code-line cl-5"></div>
+              <div class="code-line cl-6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">03</span>
+        <span>Habilidades técnicas</span>
+      </div>
+      <h2 class="section-title reveal-up">Stack <em>tecnológico</em></h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-category reveal-up" data-delay="0.1">
+          <h3 class="skill-cat-title">Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Angular</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">TypeScript</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">HTML5 / CSS3</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+              <span class="skill-pct">95%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-pct">85%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up" data-delay="0.2">
+          <h3 class="skill-cat-title">Mobile & CSS</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Ionic Framework</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Tailwind CSS</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+              <span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Bootstrap</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-pct">80%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up" data-delay="0.3">
+          <h3 class="skill-cat-title">Design & UX</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Figma</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
+              <span class="skill-pct">93%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Prototipagem</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Design Systems</span>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-pct">85%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tools-section reveal-up" data-delay="0.4">
+        <h3>Ferramentas &amp; Metodologias</h3>
+        <div class="tools-grid">
+          <div class="tool-pill">Git / GitHub</div>
+          <div class="tool-pill">Mobile-First</div>
+          <div class="tool-pill">Full-Cycle Dev</div>
+          <div class="tool-pill">Responsive Design</div>
+          <div class="tool-pill">Performance Optimization</div>
+          <div class="tool-pill">User Research</div>
+          <div class="tool-pill">Componentização</div>
+          <div class="tool-pill">Scrum / Agile</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION TIMELINE -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">04</span>
+        <span>Formação &amp; Experiência</span>
+      </div>
+      <h2 class="section-title reveal-up">Percurso <em>profissional</em></h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal-up" data-delay="0.1">
+          <div class="tl-dot"></div>
+          <div class="tl-date">2025 — Presente</div>
+          <div class="tl-content">
+            <span class="tl-badge">Educação</span>
+            <h3>Bacharelado em Engenharia Informática</h3>
+            <p class="tl-org">Universidade Católica de Angola — UCAN</p>
+            <p>Formação sólida em fundamentos de computação, algoritmos, sistemas e arquitectura de software.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" data-delay="0.2">
+          <div class="tl-dot tl-dot-work"></div>
+          <div class="tl-date">Maio 2022 — Presente</div>
+          <div class="tl-content">
+            <span class="tl-badge tl-badge-work">Experiência</span>
+            <h3>Desenvolvedor Web (Contrato)</h3>
+            <p class="tl-org">ISYS D'CORE · Remoto</p>
+            <p>Full-cycle frontend development: desde design no Figma até implementação Angular/Ionic. 
+            Entregou melhorias de performance mensuráveis em múltiplos projetos críticos.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" data-delay="0.3">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Set 2021 — Jul 2025</div>
+          <div class="tl-content">
+            <span class="tl-badge">Educação</span>
+            <h3>Técnico de Informática</h3>
+            <p class="tl-org">Instituto Médio Politécnico Giavissama e Filhos LDA</p>
+            <p>Média de <strong>16 valores</strong>. Base técnica robusta em sistemas e redes, programação e design digital.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-bg">
+      <div class="orb orb-c1"></div>
+      <div class="orb orb-c2"></div>
+    </div>
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">05</span>
+        <span>Contacto</span>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h2 class="contact-title reveal-up">
+            Vamos criar<br/><em>algo incrível</em><br/>juntos?
+          </h2>
+          <p class="contact-sub reveal-up" data-delay="0.1">
+            Estou disponível para freelance, contratos remotos e oportunidades full-time. 
+            Não hesites em entrar em contacto.
+          </p>
+
+          <div class="contact-links reveal-up" data-delay="0.2">
+            <a href="mailto:fidelinomasta@gmail.com" class="contact-link" data-cursor="link">
+              <span class="cl-icon">✉</span>
+              <div>
+                <span class="cl-label">Email</span>
+                <span class="cl-value">fidelinomasta@gmail.com</span>
+              </div>
+              <span class="cl-arrow">→</span>
+            </a>
+            <a href="tel:+244972634992" class="contact-link" data-cursor="link">
+              <span class="cl-icon">📞</span>
+              <div>
+                <span class="cl-label">Telefone</span>
+                <span class="cl-value">+244 972 634 992</span>
+              </div>
+              <span class="cl-arrow">→</span>
+            </a>
+            <a href="https://github.com/fidelinofernando" target="_blank" class="contact-link" data-cursor="link">
+              <span class="cl-icon">⌥</span>
+              <div>
+                <span class="cl-label">GitHub</span>
+                <span class="cl-value">github.com/fidelinofernando</span>
+              </div>
+              <span class="cl-arrow">→</span>
+            </a>
+            <a href="https://portfolio-fidel.vercel.app" target="_blank" class="contact-link" data-cursor="link">
+              <span class="cl-icon">🌐</span>
+              <div>
+                <span class="cl-label">Portfólio</span>
+                <span class="cl-value">portfolio-fidel.vercel.app</span>
+              </div>
+              <span class="cl-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-up" data-delay="0.3">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label>Nome</label>
+              <input type="text" placeholder="O teu nome" required />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="O teu email" required />
+            </div>
+            <div class="form-group">
+              <label>Mensagem</label>
+              <textarea rows="4" placeholder="Fala-me do teu projecto..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full" data-cursor="link">
+              Enviar mensagem <span class="btn-icon">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">FF<span>.</span></span>
+        <span class="footer-copy">© 2025 Fidel Fernando. Todos os direitos reservados.</span>
+        <div class="footer-socials">
+          <a href="https://github.com/fidelinofernando" target="_blank" data-cursor="link">GitHub</a>
+          <a href="mailto:fidelinomasta@gmail.com" data-cursor="link">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
-
 </html>
