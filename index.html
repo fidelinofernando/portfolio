@@ -1,609 +1,170 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-AO">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fidel Fernando — Frontend Developer & UI/UX Designer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fidel Fernando — Desenvolvedor Full Stack | Java/Spring Boot & Angular | Ionic</title>
+<meta name="description" content="Portfólio de Fidel Fernando, desenvolvedor Full Stack com mais de 4 anos de experiência em Java/Spring Boot, Angular, Ionic e PostgreSQL.">
+<meta property="og:title" content="Fidel Fernando — Desenvolvedor Full Stack">
+<meta property="og:description" content="Do design system à API REST, passando por SPAs e aplicações móveis.">
+<meta property="og:image" content="assets/fidel.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
-  <!-- LOADER -->
-  <div class="loader" id="loader">
-    <div class="loader-inner">
-      <span class="loader-name">FIDEL</span>
-      <div class="loader-bar"><div class="loader-bar-fill" id="loaderFill"></div></div>
-      <span class="loader-percent" id="loaderPercent">0%</span>
-    </div>
-  </div>
-
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <a href="#" class="nav-logo">FF<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="#about" data-cursor="link">Sobre</a></li>
-      <li><a href="#work" data-cursor="link">Trabalho</a></li>
-      <li><a href="#skills" data-cursor="link">Skills</a></li>
-      <li><a href="#contact" data-cursor="link">Contacto</a></li>
-    </ul>
-    <a href="mailto:fidelinomasta@gmail.com" class="nav-cta" data-cursor="link">Contrata-me →</a>
-    <button class="nav-burger" id="navBurger" aria-label="Menu">
-      <span></span><span></span>
-    </button>
+<a class="skip" href="#main">Saltar para o conteúdo</a>
+<header class="nav" id="nav">
+  <a class="brand" href="#inicio">Fidel Fernando</a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+  <nav id="menu" aria-label="Principal">
+    <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#experiencia">Experiência</a><a href="#competencias">Competências</a><a href="#educacao">Educação</a>
+    <a class="cta" href="#contacto">Contacto</a>
   </nav>
+</header>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#about" data-cursor="link">Sobre</a></li>
-      <li><a href="#work" data-cursor="link">Trabalho</a></li>
-      <li><a href="#skills" data-cursor="link">Skills</a></li>
-      <li><a href="#contact" data-cursor="link">Contacto</a></li>
+<main id="main">
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <p class="role">Desenvolvedor Full Stack <span>Java/Spring Boot &amp; Angular | Ionic</span></p>
+    <h1>Fidel<br>Fernando</h1>
+    <p class="lead">Entrego o produto de ponta a ponta: do design system à API REST, passando por SPAs e aplicações móveis.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projetos">Ver projetos</a>
+      <a class="btn" href="assets/Curriculo_Fidel_Fernando.pdf" download>Descarregar CV</a>
+    </div>
+  </div>
+  <figure class="hero-photo">
+    <img src="assets/fidel.webp" width="900" height="1329" alt="Fidel Fernando, de fato preto e camisa branca, a segurar um certificado" fetchpriority="high">
+  </figure>
+  <div class="flow" id="flow" aria-label="Fluxo de uma aplicação, do front-end à base de dados">
+    <button class="flow-title" id="replay" type="button" aria-label="Repetir animação do fluxo">Pedido de ponta a ponta</button>
+    <ol>
+      <li><b>Angular / Ionic</b><small>SPA e app móvel</small></li>
+      <li><b>API REST</b><small>OpenAPI/Swagger</small></li>
+      <li><b>Spring Security</b><small>JWT e refresh token</small></li>
+      <li><b>Serviços e JPA</b><small>Transações, @Version</small></li>
+      <li><b>PostgreSQL</b><small>Índices, soft delete</small></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block" id="sobre">
+  <h2>Sobre</h2>
+  <div class="content about">
+    <p class="big">Desenvolvedor Full Stack com mais de 4 anos de experiência profissional na construção de aplicações web e mobile.</p>
+    <p>Trabalho com Java/Spring Boot, Angular, Ionic e PostgreSQL, com foco em performance (redução de 35% nos tempos de carregamento), segurança e integração de APIs de IA. Entrego o produto de ponta a ponta: do design system à API REST, passando por SPAs e aplicações móveis.</p>
+    <dl class="facts">
+      <div><dt>35%</dt><dd>menos tempo de carregamento das páginas numa app Ionic</dd></div>
+      <div><dt>2 s</dt><dd>a menos no carregamento de uma SPA Angular</dd></div>
+      <div><dt>4 IAs</dt><dd>OpenAI, Gemini, Anthropic e DeepSeek integradas</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="block" id="projetos">
+  <h2>Projetos</h2>
+  <div class="content projects">
+    <article class="card feature">
+      <h3>Stock Management &amp; Sales API</h3>
+      <p class="stack">Java 17 · Spring Boot 3 · Spring Security · JPA/Hibernate · PostgreSQL</p>
+      <p>API REST de gestão de stock, compras, vendas, pagamentos, estornos e entregas, com movimentos de stock rastreáveis, transações, bloqueio otimista (<code>@Version</code>), estornos totais ou parciais e entrega confirmada por assinatura digital validada no servidor.</p>
+      <ul>
+        <li>Autenticação com JWT e refresh token, OTP por email para ativação de conta e recuperação de palavra-passe.</li>
+        <li>Perfis de acesso: Admin, Utilizador e Entregador.</li>
+        <li>Consultas N+1 evitadas com EntityGraph e tratamento de exceções centralizado.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Omnis — Back-end</h3>
+      <p class="stack">Java · Spring Boot · JWT · PostgreSQL · Maven multi-módulo</p>
+      <p>Back-end modular de gestão de processos, boards de tarefas, comentários e documentos, consumido por um front-end Angular.</p>
+      <ul>
+        <li>Upload de ficheiros protegido contra path traversal.</li>
+        <li>Índices em PostgreSQL, soft delete e reordenação de tarefas.</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Ondaka Studio</h3>
+      <p class="stack">Angular · Ionic · Capacitor · TypeScript</p>
+      <p>App móvel para planear guiões de vídeo, com cenas e capítulos, estimativa de duração, modo teleprompter, ensaio com gravação de áudio, importação de .docx e exportação em PDF, CSV e HTML.</p>
+      <ul>
+        <li>OpenAI, Gemini, Anthropic e DeepSeek integrados através de adaptadores com interface comum.</li>
+        <li>Novas tentativas automáticas em respostas truncadas ou inválidas e histórico de revisões reversível.</li>
+      </ul>
+    </article>
+    <article class="card wide">
+      <h3>Yamato</h3>
+      <p class="stack">HTML5 · CSS3 · JavaScript</p>
+      <p>Landing page responsiva da plataforma, com 10 secções, animações ao scroll, SEO básico e preocupação com acessibilidade.</p>
+    </article>
+  </div>
+</section>
+
+<section class="block" id="experiencia">
+  <h2>Experiência</h2>
+  <div class="content">
+    <article class="job">
+      <header>
+        <h3>ISYS D'CORE</h3>
+        <p>Desenvolvedor Full Stack (Contrato) · Presencial</p>
+        <time>Maio 2022 – Presente</time>
+      </header>
+      <ul class="impact">
+        <li><b>Mobile.</b> Desenvolvi uma aplicação móvel com Ionic Framework, reduzindo em 35% o tempo de carregamento das páginas.</li>
+        <li><b>Performance.</b> Corrigi gargalos de performance numa SPA Angular, reduzindo o tempo de carregamento em 2 segundos e melhorando a taxa de bounce.</li>
+        <li><b>Design.</b> Criei um design system no Figma, padronizando componentes e reduzindo decisões repetitivas de UI para a equipa de desenvolvimento.</li>
+        <li><b>Back-end.</b> Stock Management &amp; Sales API e Omnis, com segurança, transações e modelação em PostgreSQL.</li>
+        <li><b>Front-end e IA.</b> Ondaka Studio e a landing page Yamato, com integração de quatro fornecedores de IA.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="block" id="competencias">
+  <h2>Competências</h2>
+  <div class="content skills">
+    <div><h3>Stack principal</h3><p>Java 17, Spring Boot, Spring Security, Angular, TypeScript, PostgreSQL</p></div>
+    <div><h3>Back-end e dados</h3><p>Spring Data JPA/Hibernate, APIs REST, JWT, OpenAPI/Swagger, SQL, JPQL, Maven</p></div>
+    <div><h3>Front-end e mobile</h3><p>Ionic, Capacitor, JavaScript, HTML5, CSS3, Bootstrap, Tailwind CSS</p></div>
+    <div><h3>UI/UX e IA</h3><p>Figma (prototipagem, design systems); integração de APIs de IA (OpenAI, Gemini, Anthropic, DeepSeek)</p></div>
+    <div><h3>Ferramentas e metodologias</h3><p>Git/GitHub; Mobile-first</p></div>
+  </div>
+</section>
+
+<section class="block" id="educacao">
+  <h2>Educação</h2>
+  <div class="content edu">
+    <article>
+      <h3>Técnico de Informática</h3>
+      <p>Instituto Médio Politécnico Giavissama e Filhos LDA</p>
+      <p class="meta">Set 2021 – Jul 2025 · Média: 16 valores</p>
+    </article>
+    <article>
+      <h3>Idiomas</h3>
+      <p>Português (nativo)</p>
+    </article>
+  </div>
+</section>
+
+<section class="block contact" id="contacto">
+  <h2>Contacto</h2>
+  <div class="content">
+    <p class="big">Tem um produto para construir? Fale comigo.</p>
+    <ul class="links">
+      <li><span>Email</span><a href="mailto:fidelinomasta@gmail.com">fidelinomasta@gmail.com</a></li>
+      <li><span>Telefone</span><a href="tel:+244928710280">+244 928 710 280</a> · <a href="tel:+244958204396">+244 958 204 396</a></li>
+      <li><span>GitHub</span><a href="https://github.com/fidelinofernando" target="_blank" rel="noopener">github.com/fidelinofernando</a></li>
+      <li><span>Portfólio</span><a href="https://portfolio-fidel.vercel.app" target="_blank" rel="noopener">portfolio-fidel.vercel.app</a></li>
+      <li><span>LinkedIn</span>Fidel Fernando</li>
+      <li><span>Localização</span>Angola</li>
     </ul>
   </div>
+</section>
+</main>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-      <div class="grid-overlay"></div>
-    </div>
-
-    <div class="hero-content">
-      <div class="hero-eyebrow reveal-up">
-        <span class="dot"></span> Disponível para trabalho · Luanda, Angola
-      </div>
-
-      <h1 class="hero-title">
-        <span class="line reveal-up" data-delay="0.1">Frontend</span>
-        <span class="line reveal-up italic-line" data-delay="0.2">Developer</span>
-        <span class="line reveal-up" data-delay="0.3">&amp; UI/UX</span>
-        <span class="line reveal-up accent-line" data-delay="0.4">Designer.</span>
-      </h1>
-
-      <p class="hero-sub reveal-up" data-delay="0.5">
-        Transformo ideias em interfaces que <em>encantam</em> e <em>performam</em>.<br/>
-        Angular · Ionic · Figma · 2+ anos de experiência.
-      </p>
-
-      <div class="hero-actions reveal-up" data-delay="0.6">
-        <a href="#work" class="btn-primary" data-cursor="link">Ver trabalho</a>
-        <a href="#contact" class="btn-ghost" data-cursor="link">Falar comigo</a>
-      </div>
-
-      <div class="hero-stats reveal-up" data-delay="0.7">
-        <div class="stat">
-          <span class="stat-num" data-count="35">0</span><span>%</span>
-          <p>Redução no tempo de carga</p>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num" data-count="40">0</span><span>%</span>
-          <p>Queda na taxa de bounce</p>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num" data-count="4">0</span><span>+</span>
-          <p>Projectos entregues</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-image-wrap reveal-right">
-      <div class="hero-img-ring"></div>
-      <div class="hero-img-glow"></div>
-      <img src="assets/image/Imagem Fidel.png" alt="Fidel Fernando" class="hero-img" id="heroImg" />
-      <div class="hero-img-label">
-        <span>UI/UX Designer</span>
-        <span class="sep">·</span>
-        <span>Frontend Dev</span>
-      </div>
-    </div>
-
-    <div class="scroll-indicator">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee-section">
-    <div class="marquee-track">
-      <div class="marquee-inner">
-        <span>Angular</span><span class="dot-sep">·</span>
-        <span>Ionic Framework</span><span class="dot-sep">·</span>
-        <span>Figma</span><span class="dot-sep">·</span>
-        <span>TypeScript</span><span class="dot-sep">·</span>
-        <span>Tailwind CSS</span><span class="dot-sep">·</span>
-        <span>UI/UX Design</span><span class="dot-sep">·</span>
-        <span>Mobile-First</span><span class="dot-sep">·</span>
-        <span>Design Systems</span><span class="dot-sep">·</span>
-        <span>Performance Web</span><span class="dot-sep">·</span>
-        <span>Angular</span><span class="dot-sep">·</span>
-        <span>Ionic Framework</span><span class="dot-sep">·</span>
-        <span>Figma</span><span class="dot-sep">·</span>
-        <span>TypeScript</span><span class="dot-sep">·</span>
-        <span>Tailwind CSS</span><span class="dot-sep">·</span>
-        <span>UI/UX Design</span><span class="dot-sep">·</span>
-        <span>Mobile-First</span><span class="dot-sep">·</span>
-        <span>Design Systems</span><span class="dot-sep">·</span>
-        <span>Performance Web</span><span class="dot-sep">·</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="section-label reveal-up">
-        <span class="label-num">01</span>
-        <span>Sobre mim</span>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-text">
-          <h2 class="section-title reveal-up">
-            Criando experiências <br/><em>digitais que ficam</em> <br/>na memória.
-          </h2>
-          <p class="about-body reveal-up" data-delay="0.1">
-            Sou Fidel Fernando, desenvolvedor Front-end e UI/UX Designer baseado em Luanda, Angola. 
-            Com mais de 2 anos de experiência, especializei-me em criar interfaces que não apenas 
-            parecem belas — elas <strong>performam excepcionalmente</strong>.
-          </p>
-          <p class="about-body reveal-up" data-delay="0.2">
-            Atualmente a cursar Engenharia Informática na UCAN, combino sólidos fundamentos 
-            técnicos com uma visão apurada de design para entregar produtos que encantam utilizadores 
-            e superam métricas de negócio.
-          </p>
-          <div class="about-tags reveal-up" data-delay="0.3">
-            <span>🎓 UCAN — Eng. Informática</span>
-            <span>📍 Luanda, Angola</span>
-            <span>💼 Open to Work</span>
-          </div>
-        </div>
-
-        <div class="about-cards">
-          <div class="about-card reveal-up" data-delay="0.1">
-            <div class="card-icon">🎨</div>
-            <h3>UI/UX Design</h3>
-            <p>Do wireframe ao produto final. Figma, design systems e prototipagem de alta fidelidade.</p>
-          </div>
-          <div class="about-card reveal-up" data-delay="0.2">
-            <div class="card-icon">⚡</div>
-            <h3>Performance</h3>
-            <p>Especialista em optimização. -35% tempo de carga, -40% bounce rate em projetos reais.</p>
-          </div>
-          <div class="about-card reveal-up" data-delay="0.3">
-            <div class="card-icon">📱</div>
-            <h3>Mobile-First</h3>
-            <p>Aplicações Ionic Framework e desenvolvimento responsivo centrado no utilizador móvel.</p>
-          </div>
-          <div class="about-card reveal-up" data-delay="0.4">
-            <div class="card-icon">🔧</div>
-            <h3>Full-Cycle Dev</h3>
-            <p>Da prototipagem no Figma à implementação Angular/Ionic. Entrego o produto completo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORK / PROJECTS -->
-  <section class="work" id="work">
-    <div class="container">
-      <div class="section-label reveal-up">
-        <span class="label-num">02</span>
-        <span>Projectos em destaque</span>
-      </div>
-      <h2 class="section-title reveal-up">Trabalho <em>seleccionado</em></h2>
-    </div>
-
-    <div class="projects-list">
-
-      <div class="project-item reveal-up" data-delay="0.1">
-        <div class="project-number">01</div>
-        <div class="project-info">
-          <div class="project-tags">
-            <span>Ionic Framework</span>
-            <span>Mobile</span>
-            <span>UI/UX</span>
-          </div>
-          <h3 class="project-title">App Móvel ISYS D'CORE</h3>
-          <p class="project-desc">
-            Aplicação mobile desenvolvida do zero com Ionic Framework. 
-            Arquitectura mobile-first resultou em <strong>-35% no tempo de carregamento</strong>, 
-            aumentando a satisfação dos utilizadores significativamente.
-          </p>
-          <div class="project-metrics">
-            <div class="metric">
-              <span class="metric-val">-35%</span>
-              <span class="metric-label">Tempo de carga</span>
-            </div>
-            <div class="metric">
-              <span class="metric-val">+35%</span>
-              <span class="metric-label">Satisfação do user</span>
-            </div>
-          </div>
-        </div>
-        <div class="project-visual pv-1">
-          <div class="pv-inner">
-            <div class="phone-mock">
-              <div class="phone-screen">
-                <div class="app-ui app-ui-1"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-item reveal-up" data-delay="0.2">
-        <div class="project-number">02</div>
-        <div class="project-info">
-          <div class="project-tags">
-            <span>Angular</span>
-            <span>SPA</span>
-            <span>Performance</span>
-          </div>
-          <h3 class="project-title">Optimização SPA Angular</h3>
-          <p class="project-desc">
-            Diagnóstico e correcção de gargalos de performance numa aplicação Angular complexa. 
-            Implementação de lazy loading, code splitting e optimização de bundle — 
-            resultando em <strong>+2s de melhoria na velocidade de carregamento</strong>.
-          </p>
-          <div class="project-metrics">
-            <div class="metric">
-              <span class="metric-val">+2s</span>
-              <span class="metric-label">Melhoria de speed</span>
-            </div>
-            <div class="metric">
-              <span class="metric-val">-40%</span>
-              <span class="metric-label">Bounce rate</span>
-            </div>
-          </div>
-        </div>
-        <div class="project-visual pv-2">
-          <div class="pv-inner">
-            <div class="browser-mock">
-              <div class="browser-bar">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="browser-screen">
-                <div class="app-ui app-ui-2"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-item reveal-up" data-delay="0.3">
-        <div class="project-number">03</div>
-        <div class="project-info">
-          <div class="project-tags">
-            <span>Figma</span>
-            <span>Design System</span>
-            <span>UX Research</span>
-          </div>
-          <h3 class="project-title">Design System & Fluxo UX</h3>
-          <p class="project-desc">
-            Criação de design system completo no Figma que standardizou componentes, tokens e 
-            guidelines para toda a equipa. Simplificação de fluxo de utilizador de 
-            <strong>5 etapas para apenas 2</strong>. Reduziu decisões de UI em 70% para devs juniores.
-          </p>
-          <div class="project-metrics">
-            <div class="metric">
-              <span class="metric-val">-70%</span>
-              <span class="metric-label">Decisões UI</span>
-            </div>
-            <div class="metric">
-              <span class="metric-val">5→2</span>
-              <span class="metric-label">Etapas do fluxo</span>
-            </div>
-          </div>
-        </div>
-        <div class="project-visual pv-3">
-          <div class="pv-inner">
-            <div class="figma-mock">
-              <div class="figma-sidebar"></div>
-              <div class="figma-canvas">
-                <div class="comp-card c1"></div>
-                <div class="comp-card c2"></div>
-                <div class="comp-card c3"></div>
-                <div class="comp-card c4"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-item reveal-up" data-delay="0.4">
-        <div class="project-number">04</div>
-        <div class="project-info">
-          <div class="project-tags">
-            <span>Tailwind CSS</span>
-            <span>Multi-projecto</span>
-            <span>Standards</span>
-          </div>
-          <h3 class="project-title">Standardização Tailwind CSS</h3>
-          <p class="project-desc">
-            Implementação e padronização do Tailwind CSS em <strong>4 projectos simultâneos</strong>, 
-            criando guidelines de uso, tokens customizados e componentes reutilizáveis. 
-            Corte de 50% no tempo de estilização da equipa de desenvolvimento.
-          </p>
-          <div class="project-metrics">
-            <div class="metric">
-              <span class="metric-val">4</span>
-              <span class="metric-label">Projectos integrados</span>
-            </div>
-            <div class="metric">
-              <span class="metric-val">-50%</span>
-              <span class="metric-label">Tempo de styling</span>
-            </div>
-          </div>
-        </div>
-        <div class="project-visual pv-4">
-          <div class="pv-inner">
-            <div class="code-mock">
-              <div class="code-line cl-1"></div>
-              <div class="code-line cl-2"></div>
-              <div class="code-line cl-3"></div>
-              <div class="code-line cl-4"></div>
-              <div class="code-line cl-5"></div>
-              <div class="code-line cl-6"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="skills" id="skills">
-    <div class="container">
-      <div class="section-label reveal-up">
-        <span class="label-num">03</span>
-        <span>Habilidades técnicas</span>
-      </div>
-      <h2 class="section-title reveal-up">Stack <em>tecnológico</em></h2>
-
-      <div class="skills-grid">
-
-        <div class="skill-category reveal-up" data-delay="0.1">
-          <h3 class="skill-cat-title">Frontend</h3>
-          <div class="skill-items">
-            <div class="skill-item">
-              <span class="skill-name">Angular</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-              <span class="skill-pct">90%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">TypeScript</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-              <span class="skill-pct">85%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">HTML5 / CSS3</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
-              <span class="skill-pct">95%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">JavaScript</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-              <span class="skill-pct">85%</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category reveal-up" data-delay="0.2">
-          <h3 class="skill-cat-title">Mobile & CSS</h3>
-          <div class="skill-items">
-            <div class="skill-item">
-              <span class="skill-name">Ionic Framework</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-              <span class="skill-pct">88%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Tailwind CSS</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
-              <span class="skill-pct">92%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Bootstrap</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-              <span class="skill-pct">80%</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category reveal-up" data-delay="0.3">
-          <h3 class="skill-cat-title">Design & UX</h3>
-          <div class="skill-items">
-            <div class="skill-item">
-              <span class="skill-name">Figma</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
-              <span class="skill-pct">93%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Prototipagem</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-              <span class="skill-pct">90%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Design Systems</span>
-              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-              <span class="skill-pct">85%</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="tools-section reveal-up" data-delay="0.4">
-        <h3>Ferramentas &amp; Metodologias</h3>
-        <div class="tools-grid">
-          <div class="tool-pill">Git / GitHub</div>
-          <div class="tool-pill">Mobile-First</div>
-          <div class="tool-pill">Full-Cycle Dev</div>
-          <div class="tool-pill">Responsive Design</div>
-          <div class="tool-pill">Performance Optimization</div>
-          <div class="tool-pill">User Research</div>
-          <div class="tool-pill">Componentização</div>
-          <div class="tool-pill">Scrum / Agile</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION TIMELINE -->
-  <section class="education" id="education">
-    <div class="container">
-      <div class="section-label reveal-up">
-        <span class="label-num">04</span>
-        <span>Formação &amp; Experiência</span>
-      </div>
-      <h2 class="section-title reveal-up">Percurso <em>profissional</em></h2>
-
-      <div class="timeline">
-        <div class="timeline-item reveal-up" data-delay="0.1">
-          <div class="tl-dot"></div>
-          <div class="tl-date">2025 — Presente</div>
-          <div class="tl-content">
-            <span class="tl-badge">Educação</span>
-            <h3>Bacharelado em Engenharia Informática</h3>
-            <p class="tl-org">Universidade Católica de Angola — UCAN</p>
-            <p>Formação sólida em fundamentos de computação, algoritmos, sistemas e arquitectura de software.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up" data-delay="0.2">
-          <div class="tl-dot tl-dot-work"></div>
-          <div class="tl-date">Maio 2022 — Presente</div>
-          <div class="tl-content">
-            <span class="tl-badge tl-badge-work">Experiência</span>
-            <h3>Desenvolvedor Web (Contrato)</h3>
-            <p class="tl-org">ISYS D'CORE · Remoto</p>
-            <p>Full-cycle frontend development: desde design no Figma até implementação Angular/Ionic. 
-            Entregou melhorias de performance mensuráveis em múltiplos projetos críticos.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up" data-delay="0.3">
-          <div class="tl-dot"></div>
-          <div class="tl-date">Set 2021 — Jul 2025</div>
-          <div class="tl-content">
-            <span class="tl-badge">Educação</span>
-            <h3>Técnico de Informática</h3>
-            <p class="tl-org">Instituto Médio Politécnico Giavissama e Filhos LDA</p>
-            <p>Média de <strong>16 valores</strong>. Base técnica robusta em sistemas e redes, programação e design digital.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="contact-bg">
-      <div class="orb orb-c1"></div>
-      <div class="orb orb-c2"></div>
-    </div>
-    <div class="container">
-      <div class="section-label reveal-up">
-        <span class="label-num">05</span>
-        <span>Contacto</span>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-left">
-          <h2 class="contact-title reveal-up">
-            Vamos criar<br/><em>algo incrível</em><br/>juntos?
-          </h2>
-          <p class="contact-sub reveal-up" data-delay="0.1">
-            Estou disponível para freelance, contratos remotos e oportunidades full-time. 
-            Não hesites em entrar em contacto.
-          </p>
-
-          <div class="contact-links reveal-up" data-delay="0.2">
-            <a href="mailto:fidelinomasta@gmail.com" class="contact-link" data-cursor="link">
-              <span class="cl-icon">✉</span>
-              <div>
-                <span class="cl-label">Email</span>
-                <span class="cl-value">fidelinomasta@gmail.com</span>
-              </div>
-              <span class="cl-arrow">→</span>
-            </a>
-            <a href="tel:+244972634992" class="contact-link" data-cursor="link">
-              <span class="cl-icon">📞</span>
-              <div>
-                <span class="cl-label">Telefone</span>
-                <span class="cl-value">+244 972 634 992</span>
-              </div>
-              <span class="cl-arrow">→</span>
-            </a>
-            <a href="https://github.com/fidelinofernando" target="_blank" class="contact-link" data-cursor="link">
-              <span class="cl-icon">⌥</span>
-              <div>
-                <span class="cl-label">GitHub</span>
-                <span class="cl-value">github.com/fidelinofernando</span>
-              </div>
-              <span class="cl-arrow">→</span>
-            </a>
-            <a href="https://portfolio-fidel.vercel.app" target="_blank" class="contact-link" data-cursor="link">
-              <span class="cl-icon">🌐</span>
-              <div>
-                <span class="cl-label">Portfólio</span>
-                <span class="cl-value">portfolio-fidel.vercel.app</span>
-              </div>
-              <span class="cl-arrow">→</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="contact-form-wrap reveal-up" data-delay="0.3">
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label>Nome</label>
-              <input type="text" placeholder="O teu nome" required />
-            </div>
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" placeholder="O teu email" required />
-            </div>
-            <div class="form-group">
-              <label>Mensagem</label>
-              <textarea rows="4" placeholder="Fala-me do teu projecto..."></textarea>
-            </div>
-            <button type="submit" class="btn-primary btn-full" data-cursor="link">
-              Enviar mensagem <span class="btn-icon">→</span>
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <span class="footer-logo">FF<span>.</span></span>
-        <span class="footer-copy">© 2025 Fidel Fernando. Todos os direitos reservados.</span>
-        <div class="footer-socials">
-          <a href="https://github.com/fidelinofernando" target="_blank" data-cursor="link">GitHub</a>
-          <a href="mailto:fidelinomasta@gmail.com" data-cursor="link">Email</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+<footer><p>© <span id="year"></span> Fidel Fernando</p><a href="#inicio">Voltar ao topo</a></footer>
+<script src="js/main.js"></script>
 </body>
 </html>
