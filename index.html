@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fidel Fernando — Desenvolvedor Full Stack | Java/Spring Boot & Angular | Ionic</title>
 <meta name="description" content="Portfólio de Fidel Fernando, desenvolvedor Full Stack com mais de 4 anos de experiência em Java/Spring Boot, Angular, Ionic e PostgreSQL.">
+<meta name="author" content="Fidel Fernando">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://portfolio-fidel.vercel.app/">
 <meta property="og:title" content="Fidel Fernando — Desenvolvedor Full Stack">
 <meta property="og:description" content="Do design system à API REST, passando por SPAs e aplicações móveis.">
 <meta property="og:image" content="assets/fidel.webp">
@@ -19,7 +22,7 @@
   <a class="brand" href="#inicio">Fidel Fernando</a>
   <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
   <nav id="menu" aria-label="Principal">
-    <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#experiencia">Experiência</a><a href="#competencias">Competências</a><a href="#educacao">Educação</a>
+    <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#experiencia">Experiência</a><a href="#metodo">Método</a><a href="#competencias">Competências</a><a href="#educacao">Educação</a>
     <a class="cta" href="#contacto">Contacto</a>
   </nav>
 </header>
@@ -32,6 +35,7 @@
     <p class="lead">Entrego o produto de ponta a ponta: do design system à API REST, passando por SPAs e aplicações móveis.</p>
     <div class="actions">
       <a class="btn primary" href="#projetos">Ver projetos</a>
+      <a class="btn" href="https://github.com/fidelinofernando" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="assets/Curriculo_Fidel_Fernando.pdf" download>Descarregar CV</a>
     </div>
   </div>
@@ -43,9 +47,10 @@
     <ol>
       <li><b>Angular / Ionic</b><small>SPA e app móvel</small></li>
       <li><b>API REST</b><small>OpenAPI/Swagger</small></li>
-      <li><b>Spring Security</b><small>JWT e refresh token</small></li>
-      <li><b>Serviços e JPA</b><small>Transações, @Version</small></li>
+      <li><b>Serviços</b><small>Transações, @Version</small></li>
+      <li><b>JPA / Hibernate</b><small>EntityGraph, JPQL</small></li>
       <li><b>PostgreSQL</b><small>Índices, soft delete</small></li>
+      <li class="cross"><b>Spring Security</b><small>JWT e refresh token, perfis de acesso, transversal a todas as camadas</small></li>
     </ol>
   </div>
 </section>
@@ -67,38 +72,26 @@
   <h2>Projetos</h2>
   <div class="content projects">
     <article class="card feature">
-      <h3>Stock Management &amp; Sales API</h3>
-      <p class="stack">Java 17 · Spring Boot 3 · Spring Security · JPA/Hibernate · PostgreSQL</p>
-      <p>API REST de gestão de stock, compras, vendas, pagamentos, estornos e entregas, com movimentos de stock rastreáveis, transações, bloqueio otimista (<code>@Version</code>), estornos totais ou parciais e entrega confirmada por assinatura digital validada no servidor.</p>
-      <ul>
-        <li>Autenticação com JWT e refresh token, OTP por email para ativação de conta e recuperação de palavra-passe.</li>
-        <li>Perfis de acesso: Admin, Utilizador e Entregador.</li>
-        <li>Consultas N+1 evitadas com EntityGraph e tratamento de exceções centralizado.</li>
-      </ul>
-    </article>
-    <article class="card">
-      <h3>Omnis — Back-end</h3>
-      <p class="stack">Java · Spring Boot · JWT · PostgreSQL · Maven multi-módulo</p>
-      <p>Back-end modular de gestão de processos, boards de tarefas, comentários e documentos, consumido por um front-end Angular.</p>
-      <ul>
-        <li>Upload de ficheiros protegido contra path traversal.</li>
-        <li>Índices em PostgreSQL, soft delete e reordenação de tarefas.</li>
-      </ul>
-    </article>
-    <article class="card">
       <h3>Ondaka Studio</h3>
       <p class="stack">Angular · Ionic · Capacitor · TypeScript</p>
-      <p>App móvel para planear guiões de vídeo, com cenas e capítulos, estimativa de duração, modo teleprompter, ensaio com gravação de áudio, importação de .docx e exportação em PDF, CSV e HTML.</p>
-      <ul>
-        <li>OpenAI, Gemini, Anthropic e DeepSeek integrados através de adaptadores com interface comum.</li>
-        <li>Novas tentativas automáticas em respostas truncadas ou inválidas e histórico de revisões reversível.</li>
-      </ul>
+      <dl class="case"><div><dt>Problema</dt><dd>Planear guiões de vídeo no telemóvel, com cenas, capítulos e ensaio.</dd></div><div><dt>Solução</dt><dd>App móvel com estimativa de duração, modo teleprompter, ensaio com gravação de áudio, importação de .docx e exportação em PDF, CSV e HTML. OpenAI, Gemini, Anthropic e DeepSeek integrados por adaptadores com interface comum, com novas tentativas automáticas em respostas truncadas ou inválidas e histórico de revisões reversível.</dd></div><div><dt>Arquitetura</dt><dd class="arch"><span>Angular + Ionic + Capacitor</span><span>Adaptadores de IA</span><span>OpenAI · Gemini · Anthropic · DeepSeek</span></dd></div></dl>
+    </article>
+    <article class="card ">
+      <h3>Stock Management &amp; Sales API</h3>
+      <p class="stack">Java 17 · Spring Boot 3 · Spring Security · JPA/Hibernate · PostgreSQL</p>
+      <dl class="case"><div><dt>Problema</dt><dd>Gerir stock, compras, vendas, pagamentos, estornos e entregas.</dd></div><div><dt>Solução</dt><dd>Movimentos de stock rastreáveis, transações, bloqueio otimista (<code>@Version</code>), estornos totais ou parciais e entrega confirmada por assinatura digital validada no servidor. JWT com refresh token, OTP por email e perfis Admin, Utilizador e Entregador.</dd></div><div><dt>Arquitetura</dt><dd class="arch"><span>API REST</span><span>Spring Security</span><span>Serviços</span><span>JPA</span><span>PostgreSQL</span></dd></div></dl>
+    </article>
+    <article class="card ">
+      <h3>Omnis — Back-end</h3>
+      <p class="stack">Java · Spring Boot · JWT · PostgreSQL · Maven multi-módulo</p>
+      <dl class="case"><div><dt>Problema</dt><dd>Gerir processos, boards de tarefas, comentários e documentos.</dd></div><div><dt>Solução</dt><dd>Back-end modular consumido por um front-end Angular, com upload de ficheiros protegido contra path traversal, índices em PostgreSQL, soft delete e reordenação de tarefas.</dd></div><div><dt>Arquitetura</dt><dd class="arch"><span>Front-end Angular</span><span>Back-end modular</span><span>PostgreSQL</span></dd></div></dl>
     </article>
     <article class="card wide">
       <h3>Yamato</h3>
       <p class="stack">HTML5 · CSS3 · JavaScript</p>
       <p>Landing page responsiva da plataforma, com 10 secções, animações ao scroll, SEO básico e preocupação com acessibilidade.</p>
     </article>
+    <p class="more">Código e repositórios em <a href="https://github.com/fidelinofernando" target="_blank" rel="noopener">github.com/fidelinofernando</a></p>
   </div>
 </section>
 
@@ -106,20 +99,29 @@
   <h2>Experiência</h2>
   <div class="content">
     <article class="job">
-      <header>
-        <h3>ISYS D'CORE</h3>
-        <p>Desenvolvedor Full Stack (Contrato) · Presencial</p>
-        <time>Maio 2022 – Presente</time>
-      </header>
+      <h3>ISYS D'CORE</h3>
+      <p>Desenvolvedor Full Stack (Contrato) · Presencial</p>
+      <time>Maio 2022 – Presente</time>
       <ul class="impact">
-        <li><b>Mobile.</b> Desenvolvi uma aplicação móvel com Ionic Framework, reduzindo em 35% o tempo de carregamento das páginas.</li>
-        <li><b>Performance.</b> Corrigi gargalos de performance numa SPA Angular, reduzindo o tempo de carregamento em 2 segundos e melhorando a taxa de bounce.</li>
-        <li><b>Design.</b> Criei um design system no Figma, padronizando componentes e reduzindo decisões repetitivas de UI para a equipa de desenvolvimento.</li>
-        <li><b>Back-end.</b> Stock Management &amp; Sales API e Omnis, com segurança, transações e modelação em PostgreSQL.</li>
-        <li><b>Front-end e IA.</b> Ondaka Studio e a landing page Yamato, com integração de quatro fornecedores de IA.</li>
+        <li><b>Back-end.</b> APIs REST seguras e transacionais com Java e Spring Boot.</li>
+        <li><b>Front-end e mobile.</b> Angular, Ionic e Capacitor; app Ionic com 35% menos tempo de carregamento.</li>
+        <li><b>Performance.</b> SPA Angular com 2 segundos a menos no carregamento e melhor taxa de bounce.</li>
+        <li><b>IA.</b> Quatro fornecedores integrados no Ondaka Studio.</li>
+        <li><b>Design.</b> Design system no Figma que padroniza componentes para a equipa.</li>
       </ul>
     </article>
   </div>
+</section>
+
+<section class="block" id="metodo">
+  <h2>Como trabalho</h2>
+  <ol class="content steps">
+    <li><b>Entender</b><span>Requisitos, fluxos e dados do produto.</span></li>
+    <li><b>Desenhar</b><span>Design system no Figma e contrato da API com OpenAPI/Swagger.</span></li>
+    <li><b>Construir</b><span>Spring Boot, Angular e Ionic, do back-end ao mobile.</span></li>
+    <li><b>Proteger e otimizar</b><span>JWT, EntityGraph contra N+1, índices e carregamento rápido.</span></li>
+    <li><b>Entregar</b><span>O produto de ponta a ponta, do design system à API REST.</span></li>
+  </ol>
 </section>
 
 <section class="block" id="competencias">
@@ -151,7 +153,8 @@
 <section class="block contact" id="contacto">
   <h2>Contacto</h2>
   <div class="content">
-    <p class="big">Tem um produto para construir? Fale comigo.</p>
+    <p class="big">Tem um problema de produto ou software para resolver?</p>
+    <p class="actions"><a class="btn primary" href="mailto:fidelinomasta@gmail.com">Vamos conversar</a></p>
     <ul class="links">
       <li><span>Email</span><a href="mailto:fidelinomasta@gmail.com">fidelinomasta@gmail.com</a></li>
       <li><span>Telefone</span><a href="tel:+244928710280">+244 928 710 280</a> · <a href="tel:+244958204396">+244 958 204 396</a></li>
