@@ -16,15 +16,15 @@
 
   // Secção ativa na navegação
   const links = $$('#menu a:not(.cta)');
-  const io = new IntersectionObserver(entries => {
+  const spy = new IntersectionObserver(entries => {
     entries.forEach(en => {
       if (!en.isIntersecting) return;
       links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + en.target.id));
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
-  $$('main section[id]').forEach(s => io.observe(s));
+  $$('main section[id]').forEach(s => spy.observe(s));
 
-  // Fluxo ponta a ponta: acende cada camada em sequência
+  // Fluxo ponta a ponta: acende cada camada em sequência quando entra no ecrã
   const steps = $$('#flow li');
   let timers = [];
   const play = () => {
@@ -32,7 +32,15 @@
     steps.forEach(s => s.classList.remove('hit'));
     steps.forEach((s, i) => timers.push(setTimeout(() => s.classList.add('hit'), reduce ? 0 : 450 * (i + 1))));
   };
-  play();
+  const flow = $('#flow');
+  if ('IntersectionObserver' in window) {
+    const once = new IntersectionObserver(([en]) => {
+      if (en.isIntersecting) { play(); once.disconnect(); }
+    }, { threshold: .4 });
+    once.observe(flow);
+  } else {
+    play();
+  }
   $('#replay').addEventListener('click', play);
 
   $('#year').textContent = new Date().getFullYear();
